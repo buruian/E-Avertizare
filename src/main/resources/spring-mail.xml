@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <!--    http://howtodoinjava.com/2013/05/27/send-email-with-spring-javamailsenderimpl-example/-->
+    
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="smtp.gmail.com" />
+        <property name="port" value="587" />
+        <property name="username" value="valeraburuian@gmail.com" />
+        <property name="password" value="Bv.16200534" />
+ 
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.starttls.enable">true</prop>
+            </props>
+        </property>
+    </bean>
+ 
+    <bean id="myMailSender" class="com.iucosoft.eavertizare.util.MyMailSender">
+        <property name="mailSender" ref="mailSender" />
+    </bean>
+ 
+    <bean id="mySmsSender" class="com.iucosoft.eavertizare.util.MySmsSender"/>
+    
+</beans>

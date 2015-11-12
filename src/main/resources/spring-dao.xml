@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+        
+    <!--        - See more at: http://java2novice.com/spring/qualifier-annotation/#sthash.0asAvZ71.dpuf-->
+    
+    <context:annotation-config />
+    <context:component-scan base-package="com.iucosoft.eavertizare.dao.impl" />
+
+    <bean id="firmaDao" class="com.iucosoft.eavertizare.dao.impl.FirmaDaoImpl" />
+    <bean id="clientsDao" class="com.iucosoft.eavertizare.dao.impl.ClientsDaoImpl" />
+    <bean id="configuratiiDao" class="com.iucosoft.eavertizare.dao.impl.ConfiguratiiDaoImpl" />
+    <bean id="clientiTableModel" class="com.iucosoft.eavertizare.gui.models.ClientiTableModel" />
+    <bean id="firmeListModel" class="com.iucosoft.eavertizare.gui.models.FirmeListModel" />
+    <bean id="firmaTableModel" class="com.iucosoft.eavertizare.gui.models.FirmaTableModel" />
+
+    <!--        <property name="dataSource" ref="dataSource" />-->
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3306/eavertizare" />
+        <property name="username" value="root" />
+        <property name="password" value="free" />
+    </bean>
+    
+</beans>
