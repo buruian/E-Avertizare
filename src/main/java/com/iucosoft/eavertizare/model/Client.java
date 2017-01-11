@@ -114,11 +114,6 @@ public class Client {
 
     return true;
   }
-    
-//    @Override
-//    public String toString() {
-//        return "Clients{" + "id=" + id + ", nume=" + nume + ", prenume=" + prenume + ", nrTelefon=" + nrTelefon + ", email=" + email + ", dateExpirare=" + dateExpirare + ", firma=" + firma + ", trimis=" + trimis + '}';
-//    }
 
     @Override
     public String toString() {

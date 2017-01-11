@@ -219,7 +219,7 @@ public class MainJFrame extends javax.swing.JFrame {
                             .replaceFirst("data", sdf.format(client.getDateExpirare()).toString())
                             .replaceFirst("compania", client.getFirma().getNumeFirma());
                     try {
-                       // client.setTrimis(true);
+                        // client.setTrimis(true);
                         smsSender.sendSms(client.getNrTelefon(), mesajClient);
                         mailSender.sendMail(client.getEmail(), "E-avetizare", mesajClient);
                     } catch (Exception ex) {
@@ -235,11 +235,11 @@ public class MainJFrame extends javax.swing.JFrame {
 //                                Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
 //                            }
                 }
-               // clientsDao.update(client.getFirma(), client);
+                // clientsDao.update(client.getFirma(), client);
             }
-            
+
         }
-        
+
         this.refreshFrame();
 
 //            }
@@ -933,34 +933,7 @@ public class MainJFrame extends javax.swing.JFrame {
                     .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-// Runnable myRunnable2 = new Runnable() {
-//            @Override
-//            public void run() {
-//                MainJFrame frame = new MainJFrame();
-//                new ClassPathXmlApplicationContext("spring-quartz.xml");
-//                frame.setVisible(true);
-//            }
-//        };
-//             
-//        Thread thread2 = new Thread(myRunnable2);
-//
-//       
-//     
-//        thread2.start();
-//        
-//        Runnable myRunnable = new Runnable() {
-//            @Override
-//            public void run() {
-//                ProgressBarJDialog progressBar = new ProgressBarJDialog(new JFrame(), true);
-//                while (!ProgressBarJDialog.getFlag()) {
-//                    progressBar.setVisible(true);
-//                }
-//
-//            }
-//        };
-//
-//        Thread thread = new Thread(myRunnable);
-        /// thread.start();
+
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -977,7 +950,6 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-         //thread.start();
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonAddFirma;
